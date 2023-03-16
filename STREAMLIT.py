@@ -1,15 +1,24 @@
 import streamlit as st
+import mysql.connector
 
-# Everything is accessible via the st.secrets dict:
+# Initialize connection.
+# Uses st.cache_resource to only run once.
+@st.cache_resource
+def init_connection():
+    return mysql.connector.connect(**st.secrets["mysql"])
 
-st.write("DB username:", st.secrets["db_username"])
-st.write("DB password:", st.secrets["db_password"])
+conn = init_connection()
 
+# Perform query.
+# Uses st.cache_data to only rerun when the query changes or after 10 min.
+@st.cache_data(ttl=600)
+def run_query(query):
+    with conn.cursor() as cur:
+        cur.execute(query)
+        return cur.fetchall()
 
-# And the root-level secrets are also accessible as environment variables:
-import os
+rows = run_query("SELECT * FROM maros.sports;")
 
-st.write(
-    "Has environment variables been set:",
-    os.environ["db_username"] == st.secrets["db_username"],
-)
+# Print results.
+for row in rows:
+    st.write(f"{row[0]} has a :{row[1]}:")
