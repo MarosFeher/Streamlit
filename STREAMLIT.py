@@ -17,8 +17,28 @@ def run_query(query):
         cur.execute(query)
         return cur.fetchall()
 
-rows = run_query("SELECT * FROM maros.teams_year_playerscount;")
+rows = run_query("SELECT * FROM maros.top10_medailists;")
 
 # Print results.
-for row in rows:
-    st.write(row)
+st.title(":orange[TOP 10 BEST MEDALISTS]")
+
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.subheader(":blue[Athlete]:man-running:")
+    for row in rows:
+        st.text(row[0])
+with col2:
+   st.subheader(":red[Sport]:football:")
+   for row in rows:
+       st.text(row[1])
+with col3:
+   st.subheader(":green[Medals in total]:sports_medal:")
+   for row in rows:
+       st.text(row[2])
+
+
+
+
+
+
+
