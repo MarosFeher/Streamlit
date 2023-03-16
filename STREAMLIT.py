@@ -17,8 +17,8 @@ def run_query(query):
         cur.execute(query)
         return cur.fetchall()
 
-rows = run_query("SELECT * FROM maros.sports;")
+rows = run_query("SELECT * FROM maros.teams_year_playerscount;")
 
 # Print results.
 for row in rows:
-    st.write(f"{row[0]} has a :{row[1]}:")
+    st.write(row)
