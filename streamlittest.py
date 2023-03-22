@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 
-url = 'https://raw.githubusercontent.com/MarosFeher/Streamlit/main/top10medalistsCSV.csv'
+url = pd.read_csv('https://raw.githubusercontent.com/MarosFeher/Streamlit/main/top10medalistsCSV.csv', sep= ';')
 
 rows = pd.read_csv(url)
 
