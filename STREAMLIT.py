@@ -25,27 +25,27 @@ st.title(":orange[TOP 10 BEST MEDALISTS]")
 
 
 #### PANDAS Dataframe - jednoducha tabulka
-df = pd.DataFrame(rows)
-df.rename(columns={0: 'Athlete', 1: 'Sport', 2: 'Medals'}, inplace= True)
-df.index = pd.RangeIndex(start=1, stop=1+len(df), step=1)
-st.table(df)
+#df = pd.DataFrame(rows)
+#df.rename(columns={0: 'Athlete', 1: 'Sport', 2: 'Medals'}, inplace= True)
+#df.index = pd.RangeIndex(start=1, stop=1+len(df), step=1)
+#st.table(df)
 
 
 #### Streamlit Columns = vsetko v samostatnych stlpcoch - Nie je zarovnane !!!
 
-#col1, col2, col3 = st.columns(3)
-#with col1:
-#    st.subheader(":blue[Athlete]:man-running:")
-#    for row in rows:
-#       st.text(row[0])
-#with col2:
-#    st.subheader(":red[Sport]:football:")
-#    for row in rows:
-#        st.text(row[1])
-#with col3:
-#    st.subheader(":green[Medals in total]:sports_medal:")
-#    for row in rows:
-#        st.text(row[2])
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.subheader(":blue[Athlete]:man-running:")
+    for row in rows:
+       st.text(row[0])
+with col2:
+    st.subheader(":red[Sport]:football:")
+    for row in rows:
+        st.text(row[1])
+with col3:
+    st.subheader(":green[Medals in total]:sports_medal:")
+    for row in rows:
+        st.text(row[2])
 
 
 
