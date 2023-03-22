@@ -4,8 +4,6 @@ import pandas as pd
 
 url = 'https://raw.githubusercontent.com/MarosFeher/Streamlit/main/top10medalistsCSV.csv'
 
-
-
 rows = pd.read_csv(url)
 
 # Print results.
