@@ -24,18 +24,18 @@ if not group:
     while select_team:
         try:
             for selected in select_team:
-                st.dataframe(table.loc[table['Olympic Team'].isin([selected])])
+                st.dataframe(table.loc[table['Olympic Team'].isin([selected])],use_container_width=st.session_state)
             break
         except:
             break
     else:
-        st.dataframe(table)
+        st.dataframe(table,use_container_width=st.session_state)
 else:
     if select_team:
         selected_rows = table[table['Olympic Team'].isin(select_team)]
-        st.dataframe(selected_rows)
+        st.dataframe(selected_rows,use_container_width=st.session_state)
     else:
-        st.dataframe(table)
+        st.dataframe(table,use_container_width=st.session_state)
 
 
 
