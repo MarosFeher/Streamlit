@@ -38,10 +38,6 @@ page_names_to_funcs = {
 demo_name = st.sidebar.selectbox("Choose a demo", page_names_to_funcs.keys())
 page_names_to_funcs[demo_name]()
 
-st.set_page_config(
-    page_title="Welcome",
-    page_icon="👋",
-)
 
 
 
