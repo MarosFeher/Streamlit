@@ -16,16 +16,14 @@ st.header('Olympic Performance by Team/Country and Year :trophy:')
 select_team = st.multiselect('Select team or country: ', team)
 
 #pokial bude vybrana krajina, vytvori iba tabulku s danou krajinou. Pokial nebude tak vytvori celu tabulku
-while select_team:
+if select_team:
     try:
-        for selected in select_team:
-            st.dataframe(table.loc[table['Olympic Team'].isin([selected])])
-        break
-    except:
-        break
-while not select_team:
+        selected_rows = table.loc[table['Olympic Team'].isin(select_team)]
+        st.dataframe(selected_rows)
+    except Exception as e:
+        st.error(f"Error occurred: {e}")
+else:
     st.dataframe(table)
-    break
 
 
 
