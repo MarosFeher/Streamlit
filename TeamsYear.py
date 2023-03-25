@@ -23,7 +23,7 @@ while select_team:
         break
     except:
         break
-while select_team != True:
+while not select_team:
     st.dataframe(table)
     break
 
