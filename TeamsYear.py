@@ -29,7 +29,7 @@ if not group:
         except:
             break
     else:
-        st.dataframe(table,use_container_width=st.session_state.use_container_width)
+        st.dataframe(table)
 else:
     if select_team:
         selected_rows = table[table['Olympic Team'].isin(select_team)]
