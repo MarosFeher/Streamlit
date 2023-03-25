@@ -10,7 +10,8 @@ team = list(sorted(set(rows.iloc[:, 0])))
 table = pd.DataFrame(rows)
 #table.rename(columns={0: 'Olympic Team', 1: 'Year', 2: 'Athletes', 3: 'Medals Won', 4: 'Medal-Winning Percentage'}, inplace= True)
 table.columns = ['Olympic Team', 'Year', 'Athletes', 'Medals Won', 'Medal-Winning Percentage']
-table['Year'] = table['Year'].astype(int)
+table['Year'] = table['Year'].astype('str')
+table['Medal-Winning Percentage'] = table['Medal-Winning Percentage'].astype('float')
 table.index = pd.RangeIndex(start=1, stop=1+len(table), step=1)
 
 st.header('Olympic Performance by Team/Country and Year :trophy:')
