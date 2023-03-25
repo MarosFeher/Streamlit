@@ -2,13 +2,13 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(
-    page_title="Hello",
+    page_title="Welcome",
     page_icon="👋",
 )
 
-st.write("# Welcome to Streamlit! 👋")
+st.write("# Welcome to my project page 👋")
 
-st.sidebar.success("Select a demo above.")
+st.sidebar.success("Select a project above.")
 
 
 
