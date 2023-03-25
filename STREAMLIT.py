@@ -5,6 +5,7 @@ st.set_page_config(
     page_title="Welcome",
     page_icon="👋",
 )
+st.set_page_config(page_title="Plotting Demo", page_icon="📈")
 
 st.write("# Welcome to my project page 👋")
 
