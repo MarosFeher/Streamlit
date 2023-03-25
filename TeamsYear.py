@@ -13,8 +13,6 @@ table.columns = ['Olympic Team', 'Year', 'Athletes', 'Medals Won', 'Medal-Winnin
 table['Year'] = table['Year'].astype(int)
 table.index = pd.RangeIndex(start=1, stop=1+len(table), step=1)
 
-st.write(table.columns)
-
 st.header('Olympic Performance by Team/Country and Year :trophy:')
 select_team = st.multiselect('Select team or country: ', team)
 
