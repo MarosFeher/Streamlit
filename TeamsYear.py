@@ -7,8 +7,8 @@ rows = pd.read_csv('https://raw.githubusercontent.com/MarosFeher/Streamlit/main/
 #vyber prveho pola z riadku (nazov mesta), "set" vyberie len unikatne, "sorted" ich zoradi abecedne
 team = list(sorted(set(rows.iloc[:, 0])))
 
+pd.options.display.float_format = '{:.1f}%'.format
 table = pd.DataFrame(rows)
-#table.rename(columns={0: 'Olympic Team', 1: 'Year', 2: 'Athletes', 3: 'Medals Won', 4: 'Medal-Winning Percentage'}, inplace= True)
 table.columns = ['Olympic Team', 'Year', 'Athletes', 'Medals Won', 'Medal-Winning Percentage']
 table['Year'] = table['Year'].astype('str')
 table['Medal-Winning Percentage'] = table['Medal-Winning Percentage'].astype('float')
