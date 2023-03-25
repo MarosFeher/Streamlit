@@ -8,6 +8,8 @@ st.set_page_config(
 
 st.write("# Welcome to my project page 👋")
 
+
+st.sidebar.header("Top 10 medalists")
 st.sidebar.success("Select a project above.")
 
 
