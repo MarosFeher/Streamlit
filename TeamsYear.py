@@ -19,7 +19,7 @@ select_team = st.multiselect('Select team or country: ', team)
 while select_team:
     try:
         for selected in select_team:
-            st.dataframe(table.loc[table['Olympic Team'].isin([selected])])
+            st.dataframe(table.iloc[table['Olympic Team'].isin([selected])])
         break
     except:
         break
