@@ -5,12 +5,13 @@ st.set_page_config(
     page_title="Welcome",
     page_icon="👋",
 )
-st.set_page_config(page_title="Plotting Demo", page_icon="📈")
+
 
 st.write("# Welcome to my project page 👋")
 
 
 st.sidebar.header("Top 10 medalists")
+st.sidebar.button('TOP10')
 st.sidebar.success("Select a project above.")
 
 
