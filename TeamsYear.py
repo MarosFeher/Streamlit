@@ -17,12 +17,9 @@ select_team = st.multiselect('Select team or country: ', team)
 
 #pokial bude vybrana krajina, vytvori iba tabulku s danou krajinou. Pokial nebude tak vytvori celu tabulku
 while select_team:
-    try:
-        for selected in select_team:
-            st.dataframe(table.loc[table['Olympic Team'].isin([selected])])
-        break
-    except:
-        break
+    for selected in select_team:
+    st.dataframe(table.loc[table['Olympic Team'].isin([selected])])
+    break
 else:
     st.dataframe(table)
 
