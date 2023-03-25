@@ -11,7 +11,7 @@ print(rows)
 df = pd.DataFrame(rows)
 df.columns = ['Athlete', 'Sport', 'Medals']
 df.index = pd.RangeIndex(start=1, stop=1+len(df), step=1)
-st.table(df)
+st.dataframe(df)
 
 
 
