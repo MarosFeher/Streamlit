@@ -9,7 +9,7 @@ team = list(sorted(set(rows.iloc[:, 0])))
 
 pd.options.display.float_format = '{:.1f}%'.format
 table = pd.DataFrame(rows)
-table.columns = ['Olympic Team', 'Year', 'Athletes', 'Medals Won', 'Medal-Winning Percentage']
+table.columns = ['Olympic Team', 'Year', 'Athletes', 'Medals Won', 'Medal-Winning Percentage (%)']
 table['Year'] = table['Year'].astype('str')
 table['Medal-Winning Percentage'] = table['Medal-Winning Percentage'].astype('float')
 table.index = pd.RangeIndex(start=1, stop=1+len(table), step=1)
