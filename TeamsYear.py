@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-rows = pd.read_csv('https://raw.githubusercontent.com/MarosFeher/Streamlit/main/TeamsYearCSV.csv', sep= ';')
-next(rows)
+rows = pd.read_csv('https://raw.githubusercontent.com/MarosFeher/Streamlit/main/TeamsYearCSV.csv', sep= ';', header = 0)
+
 
 #vyber prveho pola z riadku (nazov mesta), "set" vyberie len unikatne, "sorted" ich zoradi abecedne
 team = list(sorted(set([i[0] for i in rows])))
