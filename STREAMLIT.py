@@ -1,6 +1,18 @@
 import streamlit as st
 import pandas as pd
 
+def Home():
+    st.write("# Welcome to my project page 👋")
+
+
+    st.sidebar.header("Top 10 medalists")
+    st.sidebar.button('TOP10')
+    st.sidebar.success("Select a project above.")
+
+    st.header('hello')
+    st.write('https://marosfehertop10athletes.streamlit.app/')
+    st.write('https://marosfeher-streamlit-teamsyear-i1k4fe.streamlit.app/')
+
 def TOP10():
     import streamlit as st
     import pandas as pd
@@ -19,6 +31,7 @@ def TOP10():
 
 
 page_names_to_funcs = {
+    "Homepage" : Home,
     "TOP 10 Medalists": TOP10
 }
 
@@ -31,15 +44,4 @@ st.set_page_config(
 )
 
 
-st.write("# Welcome to my project page 👋")
 
-
-st.sidebar.header("Top 10 medalists")
-st.sidebar.button('TOP10')
-st.sidebar.success("Select a project above.")
-
-
-
-st.header('hello')
-st.write('https://marosfehertop10athletes.streamlit.app/')
-st.write('https://marosfeher-streamlit-teamsyear-i1k4fe.streamlit.app/')
