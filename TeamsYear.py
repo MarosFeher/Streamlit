@@ -16,16 +16,25 @@ table.index = pd.RangeIndex(start=1, stop=1+len(table), step=1)
 st.header('Olympic Performance by Team/Country and Year :trophy:')
 select_team = st.multiselect('Select team or country: ', team)
 
+group = st.checkbox('All data in one table')
+
+if not group:
 #pokial bude vybrana krajina, vytvori iba tabulku s danou krajinou. Pokial nebude tak vytvori celu tabulku
-while select_team:
-    try:
-        for selected in select_team:
-            st.dataframe(table.loc[table['Olympic Team'].isin([selected])])
-        break
-    except:
-        break
+    while select_team:
+        try:
+            for selected in select_team:
+                st.dataframe(table.loc[table['Olympic Team'].isin([selected])])
+            break
+        except:
+            break
+    else:
+        st.dataframe(table)
 else:
-    st.dataframe(table)
+    if select_team:
+        selected_rows = table[table['Olympic Team'].isin(select_team)]
+        st.dataframe(selected_rows)
+    else:
+        st.dataframe(table)
 
 
 
