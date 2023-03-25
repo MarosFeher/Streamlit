@@ -4,7 +4,7 @@ import pandas as pd
 rows = pd.read_csv('https://raw.githubusercontent.com/MarosFeher/Streamlit/main/TeamsYearCSV.csv', sep= ';')
 
 #vyber prveho pola z riadku (nazov mesta), "set" vyberie len unikatne, "sorted" ich zoradi abecedne
-team = list(sorted(set([i[1] for i in rows])))
+team = list(sorted(set([i[0] for i in rows])))
 
 table = pd.DataFrame(rows)
 table.rename(columns={0: 'Olympic Team', 1: 'Year', 2: 'Athletes', 3: 'Medals Won', 4: 'Medal-Winning Percentage'}, inplace= True)
