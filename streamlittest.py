@@ -9,7 +9,7 @@ st.title(":orange[TOP 10 BEST MEDALISTS]")
 print(rows)
 
 df = pd.DataFrame(rows)
-df.rename(columns={0: 'Athlete', 1: 'Sport', 2: 'Medals'}, inplace= True)
+df.columns['Athlete', 'Sport', 'Medals']
 df.index = pd.RangeIndex(start=1, stop=1+len(df), step=1)
 st.table(df)
 
