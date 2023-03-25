@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import mysql.connector
 
-rows = pd.read_csv('https://raw.githubusercontent.com/MarosFeher/Streamlit/main/TeamsYearCSV.csv', sep= ';'
+rows = pd.read_csv('https://raw.githubusercontent.com/MarosFeher/Streamlit/main/TeamsYearCSV.csv', sep= ';')
 
 #vyber prveho pola z riadku (nazov mesta), "set" vyberie len unikatne, "sorted" ich zoradi abecedne
 team = list(sorted(set([i[0] for i in rows])))
