@@ -8,7 +8,7 @@ rows = pd.read_csv('https://raw.githubusercontent.com/MarosFeher/Streamlit/main/
 team = list(sorted(set(rows.iloc[:, 0])))
 
 table = pd.DataFrame(rows).rename(columns={0: 'Olympic Team', 1: 'Year', 2: 'Athletes', 3: 'Medals Won', 4: 'Medal-Winning Percentage'}, inplace= True)
-table['Year'] = table['Year'].astype(int)
+#table['Year'] = table['Year'].astype(int)
 table.index = pd.RangeIndex(start=1, stop=1+len(table), step=1)
 
 st.header('Olympic Performance by Team/Country and Year :trophy:')
