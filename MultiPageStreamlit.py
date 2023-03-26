@@ -39,6 +39,8 @@ def Home():
                      "I'm eager to take the next step and begin working in IT, "
                      "applying my skills and knowledge to real-world problems and challenges.")
     st.sidebar.write('Feel free to explore :wink:')
+    
+    
 def TOP10():
     import streamlit as st
     import pandas as pd
@@ -65,6 +67,7 @@ def TOP10():
 
     st.sidebar.header("About")
     st.sidebar.write('This page is a demonstration of a simple dataframe.')
+    
 
 def TeamYear():
     import streamlit as st
@@ -88,6 +91,7 @@ def TeamYear():
              "The table includes the year in which each team competed, the name of the team, "
              "the number of athletes that competed for the team, the number of medals the team won, "
              "and the team's medal-winning percentage.")
+    st.caption("This table contains Countries and also Team names"
     st.write("")
     st.write("")
     st.write("")
