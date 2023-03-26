@@ -91,7 +91,7 @@ def TeamYear():
              "The table includes the year in which each team competed, the name of the team, "
              "the number of athletes that competed for the team, the number of medals the team won, "
              "and the team's medal-winning percentage.")
-    st.caption("This table contains Countries and also Team names"
+    st.caption("This table contains Countries and also Team names")
     st.write("")
     st.write("")
     st.write("")
